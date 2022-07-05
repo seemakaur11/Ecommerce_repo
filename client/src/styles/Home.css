@@ -1,0 +1,128 @@
+/*home section*/
+.homeSection{
+background-color: rgb(237 237 237 0.35);
+height: auto;
+}
+.sliderText{
+font-size: 16px;
+font-family: 'Poppins',sans-serif;
+margin-top: 205px;
+color: black;
+font-weight: 600;
+cursor: pointer;
+}
+.sliderText11{
+cursor: pointer;
+font-size: 16px;
+font-family: 'Poppins',sans-serif;
+color: black;
+font-weight: 600;
+}
+.cardImg{
+padding: 20px 25px;
+height: 80%;
+width: 188px;
+background: #ccc;;
+border: 1px solid #ccc;;
+transition: 0.5s;
+text-align: center;
+justify-content: center;
+}
+.cardImg:hover{
+border-color: #ccc;
+cursor: pointer;
+background: #fff;
+transition: 0.5s;
+}
+.cardTitle{
+font-size: 19px;
+font-weight: 600;
+text-align: center;
+color: black;
+font-family: 'Poppins',sans-serif
+}
+.cardTitle:hover{
+    color:#864c31
+}
+.popularText{
+font-size: 2.0588235294118rem;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+line-height: 1.2;
+text-transform: capitalize;
+}
+.popularPara{
+font-family: 'Poppins',sans-serif;
+line-height: 1.8;
+font-size: 17px;
+font-weight: 300;
+color: #000000;
+}
+
+/*home about section css*/
+.homeAboutText{
+font-size: 45px;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+line-height: 1.2;
+color: #000000;
+}
+.homeAboutPara{
+font-family: 'Poppins',sans-serif;
+line-height: 1.8;
+font-size: 18px;
+font-weight: 200;
+color: #000000;
+}
+.borderBtn{
+border-left: 5px solid #864C31;
+padding: 15px 20px 20px;
+left: 10px;
+}
+.borderPara{
+font-family: 'Poppins',sans-serif;
+line-height: 1.8;
+text-align: left;
+font-size: 20px;
+font-weight: 100;
+color: #000000; 
+}
+.floorCard{
+background-color: white;
+padding: 20px 15px;
+}
+.floorIcon{
+color: #864c31;
+font-size: 55px;
+}
+.floorText{
+font-family: 'Poppins',sans-serif;
+text-align: center;
+font-size: 22px;
+padding: 10px;
+color: #000000; 
+line-height: 32px;
+}
+/*home floor section css*/
+.HomeFloorText{
+font-family: 'Poppins',sans-serif;
+font-size: 2.9411764705882rem;
+font-weight: 900;
+line-height: 1.2;
+color: #000000; 
+}
+.homeFloorPara{
+font-family: 'Poppins',sans-serif;
+font-size: 17px;
+font-weight: 400;
+line-height: 1.8;
+display: flex;
+text-align: left;
+
+}
+.spanText{
+color: #000000; 
+font-size: 70px;
+padding: 10px 10px;
+font-weight: 700;
+}
