@@ -126,3 +126,147 @@ font-size: 70px;
 padding: 10px 10px;
 font-weight: 700;
 }
+
+/*home product css*/
+.browserH2{
+font-size: 2.9411764705882rem;
+font-weight: 700;
+font-family: 'Roboto',sans-serif;
+line-height: 1.2;
+text-transform: capitalize
+ 
+}
+.arrowBtn{
+float: right;
+background-color: #864c31;
+color: white;
+cursor: pointer;
+margin: 5px;
+border: #864c31;
+font-size: 20px;
+}
+.arrowBtn:hover{
+background-color: #000000;
+}
+.pressText{
+color: #000000;
+font-size: 23px;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+line-height: 1.2;
+}
+.pressBtn{
+color: #000000;
+background-color: transparent;
+border: 1px solid #222222;
+height: 45px;
+width: 155px;
+}
+.pressBtn:hover{
+background-color: #000000;
+color: white;
+}
+.imgSlider{
+width: 230px;
+height: 200px;
+cursor: pointer;
+}
+/*home service section css*/
+.homeServText{
+font-size: 2.9411764705882rem;
+font-weight: 800;
+font-family: 'Poppins',sans-serif;
+line-height: 1.2;
+text-transform: capitalize;
+color: #000000;
+}
+.homeServPara{
+font-family: 'Roboto',sans-serif;
+font-weight: 300;
+font-size: 18px;
+line-height: 1.8;
+color: #434446;
+}
+.serviceImg{
+width: 100%;
+height: 520px;
+cursor: pointer;
+}
+.serviceImg1{
+width: 100%;
+height: 247px;
+cursor: pointer;
+}
+.viewServBtn{
+color: #1f1d1d;
+background-color: transparent;
+border: 1px solid #222222;
+height: 50px;
+width: 185px;
+font-size: 15px;
+}
+.viewServBtn:hover{
+background-color: #000000;
+color: white;
+}
+.overlayServ{
+position: absolute; 
+top: 4%; 
+background: #ffffffd9;
+background: #ffffffd9; 
+width: 100%;
+transition: .5s;
+color: black;
+padding: 15px;
+display: block;
+text-align: center;
+opacity: 1;
+font-size: 1.3529411764706rem;
+line-height: 1.4;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+cursor: pointer;
+}
+
+.servContainer{
+    position: relative;
+}
+.overlayServ1{
+position: absolute; 
+bottom: 4%; 
+background: #ffffffd9;
+background: #ffffffd9; 
+width: 100%;
+transition: .5s;
+color: black;
+padding: 15px;
+display: block;
+text-align: center;
+opacity: 1;
+font-size: 1.3529411764706rem;
+line-height: 1.4;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+cursor: pointer; 
+}
+.overlayServ2{
+position: absolute; 
+bottom: 4%; 
+background: #ffffffd9;
+background: #ffffffd9; 
+width: 100%;
+transition: .5s;
+color: black;
+padding: 15px;
+display: block;
+text-align: center;
+opacity: 1;
+font-size: 1.3529411764706rem;
+line-height: 1.4;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+cursor: pointer;
+}
+/* .servContainer:hover .overlayServ{
+    opacity: 1;
+  } */

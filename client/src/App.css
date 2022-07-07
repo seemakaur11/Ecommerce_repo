@@ -7,7 +7,8 @@ width: 250px;
 color: #3f3e3e;
 font-weight: 300;
 z-index: 10;
-position: relative;
+/* margin-left: 160px; */
+position:relative;
 outline: none;
 }
 #sabLink{
@@ -16,12 +17,48 @@ outline: none;
   cursor: pointer;
   font-size: 15px;
 }
+#sabLink:hover{
+  color:#864c31;
+}
 #collapseBtn{
   color:#864c31;
 }
 .floorGroup {
   background-color: rgba(237 237 237 0.35);
 }
+.signLink{
+  color: #141414;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Poppins',sans-serif;
+}
+.signLink:hover{
+  color:#864c31
+}
+.userIcon{
+  color:#864c31;
+  font-size: 20px;
+}
+.userIcon:hover{
+  color: black;
+  cursor: pointer;
+}
+.logoutA{
+  text-decoration: none;
+}
+.logoutBtn{
+  color: #864c31;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Poppins',sans-serif;
+}
+.logoutIcon{
+  color: black;
+}
+
+
+
 /* #mainContent::before{
 content: "GLOBAL FLOOR GROUP";
 position: absolute;
@@ -32,5 +69,5 @@ text-align: center;
 font-size: 140px;
 margin-top: 70px;
 color: #b1b0b0;
-
+visibility: inherit;
 } */

@@ -1,52 +1,128 @@
 import React from 'react';
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../actions/auth';
 
-function Navbar() {
+function Navbar({ auth: { isAuthenticated, loading }, logout }) {
+
+    const authLinks = (
+        <nav className="navbar navbar-expand-sm floorGroup">
+            <div className="container-fluid">
+                <img src={logo} className="img-fluid ms-3" alt="alt" />
+                <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span className="navbar-toggler-icon" id="collapseBtn"></span>
+                </button>
+                <div className="collapse navbar-collapse justify-content-start" id="collapsibleNavbar">
+                    <ul className="navbar-nav mx-3" id="navbarUl">
+                        <li className="nav-item m-2">
+                            <Link to='/' className="nav-link" id="sabLink" >HOME</Link>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to='/about-us' className="nav-link" id="sabLink">ABOUT US</Link>
+                        </li>
+                        <li className="nav-item dropdown m-2">
+                            <Link className="nav-link dropdown-toggle" data-bs-toggle="dropdown" to='/services' id="sabLink">SERVICES</Link>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="/" >Flooring</a></li>
+                                <li><a className="dropdown-item" href="/" >Supply And Installation</a></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to="/products" className="nav-link" id="sabLink">PRODUCTS</Link>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to='/gallery' className="nav-link" id="sabLink" >GALLERY</Link>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to='/contact-us' className="nav-link" id="sabLink" >CONTACT US</Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className='searchCollapse'>
+                    <div className="collapse collapse-horizontal" id="collapseWidthExample">
+                        <input className="card card-body" type="text" placeholder="Search" id="searchInput" />
+                    </div>
+                </div>
+                <i className="fa-solid fa-magnifying-glass mx-3" id="seacrh_icon" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></i>
+                <div className='p-2'>
+                    <a onClick={logout} href="/" className='logoutA'>
+                        <i className='fas fa-sign-out-alt logoutIcon'></i>{' '}
+                        <span className='hide-sm logoutBtn'>Logout</span></a>
+                </div>
+            </div>
+        </nav>
+    );
+    const guestLinks = (
+        <nav className="navbar navbar-expand-sm floorGroup">
+            <div className="container-fluid">
+                <img src={logo} className="img-fluid ms-3" alt="alt" />
+                <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span className="navbar-toggler-icon" id="collapseBtn"></span>
+                </button>
+                <div className="collapse navbar-collapse justify-content-start" id="collapsibleNavbar">
+                    <ul className="navbar-nav mx-4" id="navbarUl">
+                        <li className="nav-item m-2">
+                            <Link to='/' className="nav-link" id="sabLink" >HOME</Link>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to='/about-us' className="nav-link" id="sabLink">ABOUT US</Link>
+                        </li>
+                        <li className="nav-item dropdown m-2">
+                            <Link className="nav-link dropdown-toggle" data-bs-toggle="dropdown" to='/services' id="sabLink">SERVICES</Link>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="/" >Flooring</a></li>
+                                <li><a className="dropdown-item" href="/" >Supply And Installation</a></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to="/products" className="nav-link" id="sabLink">PRODUCTS</Link>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to='/gallery' className="nav-link" id="sabLink" >GALLERY</Link>
+                        </li>
+                        <li className="nav-item m-2">
+                            <Link to='/contact-us' className="nav-link" id="sabLink" >CONTACT US</Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className='searchCollapse'>
+                    <div className="collapse collapse-horizontal" id="collapseWidthExample">
+                        <input className="card card-body" type="text" placeholder="Search" id="searchInput" />
+                    </div>
+                </div>
+                <div className='searchIcon'>
+                    <i className="fa-solid fa-magnifying-glass p-3" id="seacrh_icon" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></i>
+                    <i className="fa-solid fa-user userIcon"></i><Link to='/login' className='signLink p-3'>Login</Link>
+                </div>
+            </div>
+        </nav>
+    )
     return (
         <section className="">
             <div id="mainContent"></div>
-            <nav className="navbar navbar-expand-sm floorGroup">
+            {/* <nav className="navbar navbar-expand-sm floorGroup">
                 <div className="container-fluid">
                     <img src={logo} className="img-fluid ms-3" alt="alt" />
                     <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                         <span className="navbar-toggler-icon" id="collapseBtn"></span>
-                    </button>
-                    <div className="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-                        <ul className="navbar-nav me-auto mb-3 mb-lg-0 mx-5" id="navbarUl">
-                            <li className="nav-item m-2">
-                                <Link className="nav-link" id="sabLink" activeClass="active" to="home" spy={true} smooth={true} offset={-100} duration={100}>HOME</Link>
-                            </li>
-                            <li className="nav-item m-2">
-                                <Link className="nav-link" id="sabLink" to="about" spy={true} smooth={true} offset={-100} duration={100}>ABOUT US</Link>
-                            </li>
-                            <li className="nav-item dropdown m-2">
-                                <Link className="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="sabLink" to="services" spy={true} smooth={true} offset={-100} duration={100}>SERVICES</Link>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/" >Flooring</a></li>
-                                    <li><a className="dropdown-item" href="/" >Supply And Installation</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item m-2">
-                                <Link className="nav-link" id="sabLink" to="specials" spy={true} smooth={true} offset={-100} duration={100}>PRODUCTS</Link>
-                            </li>
-                            <li className="nav-item m-2">
-                                <Link className="nav-link" id="sabLink" to="events" spy={true} smooth={true} offset={-100} duration={100}>GALLERY</Link>
-                            </li>
-                            <li className="nav-item m-2">
-                                <Link className="nav-link" id="sabLink" activeClass="active" to="chefs" spy={true} smooth={true} offset={-100} duration={100}>CONTACT US</Link>
-                            </li>
-                        </ul>
-                        <div className='searchCollapse'>
-                            <div className="collapse collapse-horizontal" id="collapseWidthExample">
-                                <input className="card card-body" type="text" placeholder="Search" id="searchInput" />
-                            </div>
-                        </div>
-                        <i className="fa-solid fa-magnifying-glass mx-3" id="seacrh_icon" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"></i>
-                    </div>
-                </div>
-            </nav>
+                    </button> */}
+            {!loading && (
+                <div>{isAuthenticated ? authLinks : guestLinks}</div>
+            )}
+            {/* </div>
+            </nav> */}
         </section>
     )
 }
-export default Navbar
+Navbar.propTypes = {
+    logout: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+}
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(mapStateToProps, { logout })(Navbar);

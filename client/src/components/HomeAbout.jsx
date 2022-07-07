@@ -1,12 +1,12 @@
 import React from 'react';
 import homeAbout from '../images/homeAbout.jpg';
-import '../styles/Home.css'
+import '../styles/Home.css';
 import HomeFloor from './HomeFloor';
 
 function HomeAbout() {
     return (
         <div>
-            <section style={{ backgroundImage: `url(${homeAbout})`, backgroundPosition: "center" }}>
+            <section style={{ backgroundImage: `url(${homeAbout})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
                 <div className='container py-5'>
                     <div className='row pt-5'>
                         <h1 className='pt-5 homeAboutText'>About Our Company</h1>

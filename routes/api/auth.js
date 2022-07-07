@@ -13,7 +13,6 @@ const auth = require('../../middleware/auth');
 router.get('/', auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
-    console.log(' get user ----->', user);
     res.json(user);
   } catch (err) {
     console.error('error in get auth ---->', err.message);
@@ -51,15 +50,16 @@ router.post(
           .json({ errors: [{ msg: 'Password not Match' }] });
       }
       // Create token
-      const jwttoken = jwt.sign(
-        { user_id: user._id, email },
-        config.get('jwtSecret'),
-        {
-          expiresIn: '2h',
-        }
-      );
+      const payload = {
+        user: {
+          id: user.id,
+        },
+      };
+      const jwttoken = jwt.sign(payload, config.get('jwtSecret'), {
+        expiresIn: 360000,
+      });
       user.token = jwttoken;
-      res.status(201).json({ msg: ' User logged in successfully', jwttoken });
+      return res.status(201).json(jwttoken);
     } catch (error) {
       console.log('server error ++++', err.message);
       res.status(500).send('Server error');

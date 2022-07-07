@@ -42,16 +42,16 @@ router.post(
       await user.save();
 
       // Create token
-      const jwttoken = jwt.sign(
-        { user_id: user._id, email },
-        config.get('jwtSecret'),
-        {
-          expiresIn: '2h',
-        }
-      );
-      console.log(' user ----->', user);
+      const payload = {
+        user: {
+          id: user.id,
+        },
+      };
+      const jwttoken = jwt.sign(payload, config.get('jwtSecret'), {
+        expiresIn: 360000,
+      });
       user.token = jwttoken;
-      res.status(201).json(jwttoken);
+      return res.status(201).json(jwttoken);
     } catch (err) {
       console.log('server error ++++', err.message);
       res.status(500).send('Server error');
