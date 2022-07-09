@@ -23,27 +23,29 @@ function Login({ login, isAuthenticated }) {
     }
 
     return (
-        <div className='container'>
-            <Alert />
-            <div className='row text-center'>
-                <h1 className='large text-primary'>Sign In</h1>
-                <form className='form py-3' onSubmit={(e) => onSubmit(e)}>
-                    <div className='form-group m-3'>
-                        <input type='email' className='p-2' placeholder='Email Address' name='email' value={email} onChange={(e) => onChange(e)} />
-                    </div>
-                    <div className='form-group m-3'>
-                        <input type='password' className='p-2' placeholder='Password' name='password' minLength='6' value={password} onChange={(e) => onChange(e)} />
-                    </div>
-                    <div>
-                        <button type="submit" className='btn btn-danger'>Login</button>
-                        {/* <Link to="/">Login</Link> */}
-                    </div>
-                </form>
-                <p className='py-4'>
-                    Don't have an account? <Link to='/register'>Sign Up</Link>
-                </p>
-            </div>
+        <div>
+            <div className='aboutContant'></div>
+            <div className='container'>
+                <Alert />
+                <div className='row text-center'>
+                    <div className='text-center'><h3 className='signInTitle'>SIGN IN</h3></div>
+                    <form className='form py-3' onSubmit={(e) => onSubmit(e)}>
+                        <div className='form-group m-3'>
+                            <input type='email' className='p-2 loginInput' placeholder='Email Address' name='email' value={email} onChange={(e) => onChange(e)} />
+                        </div>
+                        <div className='form-group m-3'>
+                            <input type='password' className='p-2 loginInput' placeholder='Password' name='password' minLength='6' value={password} onChange={(e) => onChange(e)} />
+                        </div>
+                        <div>
+                            <button type="submit" className='loginUserBtn'>Login</button>
+                        </div>
+                    </form>
+                    <p className='py-3'>
+                        Don't have an account? <Link to='/register' className='linkSignUp p-2'>Sign Up</Link>
+                    </p>
+                </div>
 
+            </div>
         </div>
     )
 }

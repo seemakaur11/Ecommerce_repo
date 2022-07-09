@@ -51,12 +51,14 @@ function HomeProduct() {
                         <Slider ref={setSliderRef} {...settings}>
                             {pressSlider.map(obj => {
                                 return (
-                                    <div key={obj.id} className="card">
-                                        <img src={obj.image} className="imgSlider justify-content-center m-3" alt="product" />
-                                        <div className='card-body-title text-center'>
-                                            <h4 className='pressText'>{obj.text}</h4>
-                                            <div className='py-4'>
-                                                <button className='pressBtn'>READ MORE</button>
+                                    <div className='p-2'>
+                                        <div key={obj.id} className="card">
+                                            <img src={obj.image} className="imgSlider justify-content-center m-1" alt="product" />
+                                            <div className='card-body-title text-center'>
+                                                <h4 className='pressText'>{obj.text}</h4>
+                                                <div className='slidePressBtn pt-4'>
+                                                    <button className='pressBtn'>READ MORE</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

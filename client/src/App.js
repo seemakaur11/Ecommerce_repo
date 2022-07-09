@@ -11,6 +11,10 @@ import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
 import { useEffect } from 'react';
 import Footer from './components/Footer';
+import About from './components/About';
+import Services from './components/Services';
+import Floor from './components/Floor';
+import SupplyAndInstall from './components/SupplyAndInstall';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -28,6 +32,13 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/about-us' element={<About />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/flooring' element={<Floor />} />
+          <Route
+            path='/supply-and-installation'
+            element={<SupplyAndInstall />}
+          />
         </Routes>
         <Footer />
       </Router>

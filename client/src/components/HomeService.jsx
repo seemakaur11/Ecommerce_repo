@@ -15,11 +15,11 @@ function HomeService() {
                 <p className='homeServPara'>From modern, traditional to contemporary flooring options,
                     we are home to flooring options of all kinds.</p>
                 <div className='row text-center py-4'>
-                    <div className='col-md-3 servContainer'>
+                    <div className='col-lg-3 servContainer'>
                         <img src={service1} className="serviceImg" alt="service1" />
                         <div className="overlayServ">Flooring</div>
                     </div>
-                    <div className='col-md-3'>
+                    <div className='col-lg-3'>
                         <div className='servContainer'>
                             <img src={service2} className="serviceImg1" alt="service2" />
                             <div className="overlayServ1">Solid Timber</div>
@@ -29,7 +29,7 @@ function HomeService() {
                             <div className="overlayServ2">Hybrid</div>
                         </div>
                     </div>
-                    <div className='col-md-3'>
+                    <div className='col-lg-3'>
                         <div className='servContainer'>
                             <img src={service4} className="serviceImg1" alt="service4" />
                             <div className="overlayServ1">Laminate</div>
@@ -39,7 +39,7 @@ function HomeService() {
                             <div className="overlayServ2">Engineered</div>
                         </div>
                     </div>
-                    <div className='col-md-3 servContainer'>
+                    <div className='col-lg-3 servContainer'>
                         <img src={service6} className="serviceImg" alt="service6" />
                         <div className="overlayServ" style={{ right: "4px" }}>Supply and Installation</div>
                     </div>

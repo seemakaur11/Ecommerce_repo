@@ -6,17 +6,17 @@ import HomeFloor from './HomeFloor';
 function HomeAbout() {
     return (
         <div>
-            <section style={{ backgroundImage: `url(${homeAbout})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+            <section style={{ backgroundImage: `url(${homeAbout})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
                 <div className='container py-5'>
                     <div className='row pt-5'>
                         <h1 className='pt-5 homeAboutText'>About Our Company</h1>
                         <p className='homeAboutPara py-3'>We are Global Floor Group, a name that you can trust
                             with all your flooring needs in Australia. A modern
-                            space has diverse flooring needs and catering to them
+                            space has diverse <br />flooring needs and catering to them
                             all is our Australian-owned and operated flooring company
-                            based out of Truganina. We have a wide assortment of floor
+                            based out of Truganina. We<br /> have a wide assortment of floor
                             designs and colors from which you can pick the ones that go best
-                            with the vibe and needs of your home or commercial space.</p>
+                            with the vibe and needs of<br /> your home or commercial space.</p>
                     </div>
                     <div className='borderBtn ms-5'>
                         <p className='borderPara'>We don’t limit ourselves to just offering flooring options
