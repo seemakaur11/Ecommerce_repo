@@ -1,0 +1,85 @@
+.filterTitle{
+background-color: black;
+color: white;
+width: 250px;
+height: 50px;
+font-size: 21px;
+font-weight: 600;
+font-family:'Poppins',sans-serif;
+}
+.labelFilter{
+font-size: 19px;
+font-weight: 500;
+color: #864c31;
+}
+.subLabel{
+font-size: 16px;
+font-weight: 300;
+}
+.sortProduct{
+outline: none;
+width: 100%;
+height: 40px;
+padding: 5px;
+font-size: 17px;
+font-weight: 300;
+font-family:'Poppins',sans-serif;
+}
+.optionProduc{
+font-size: 17px;
+font-weight: 300;
+font-family:'Poppins',sans-serif;   
+}
+/*pagination css*/
+.pagination{
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center ;
+margin-top: 3rem;
+font-size: 1.2rem;
+gap: 5px;
+}
+.pagination .page-num{
+padding: 8px 15px;
+cursor: pointer;
+border-radius: 3px;
+font-weight: 400;
+border: 1px solid #864c31;
+text-decoration: none;
+color: #222222;
+}
+.pagination .page-num:hover{
+background-color: #864c31;
+color: white;
+}
+.pagination .active{
+background-color: #864c31;
+color: white;
+}
+.filterProductImg{
+width: 200px;
+height: 180px;
+}
+.filterTitle11{
+ font-size: 18px;
+ font-weight: 400;
+ font-family:'Poppins',sans-serif; 
+}
+.filterProductBtn{
+  background-color: transparent;
+  color: black; 
+  border: 1px solid #222222;
+  height: 50px;
+  width: 150px;
+  font-size: 15px; 
+}
+.filterProductBtn:hover{
+  background-color: #222222;
+  color: white;
+}
+.filterText11{
+  color: #864c31;
+  font-weight: 300;
+  font-size: 16px;
+}

@@ -1,0 +1,86 @@
+.galleryTitle{
+display: inline-block;
+color: #000;
+font-size: 100px;
+text-transform: uppercase;
+font-weight: 500;
+margin-top: -57px;
+z-index: 1;
+}
+
+/* conatct section css*/
+.contactIcon{
+background: #000;
+width: 90px;
+height: 90px;
+line-height: 90px;
+text-align: center;
+font-size: 40px;
+color: #ffffff;
+border-radius: 100px;
+transition: 0.5s;  
+}
+.contactIcon:hover{
+background-color: #864c31;
+cursor: pointer;
+}
+.contactText{
+font-size: 23px;
+line-height: 1.4;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+}
+.contactPara{
+font-size: 17px;
+color: #000;
+font-weight: 200;
+font-family: 'Poppins',sans-serif;
+}
+.touchMain{
+margin-left: 70px;
+}
+.contactTouchText{
+color: white;
+font-size: 23px;
+font-weight: 700;
+font-family: 'Poppins',sans-serif;
+}
+.contactTouchPara{
+color: white;
+font-size: 17px;
+font-weight: 200;
+}
+.contactTouchIcon{
+  color: #864c31;
+  margin-top: 8px;
+  font-size: 55px;
+}
+.contactTouchInput{
+ width: 80%;
+ outline: none;
+ border: 1px solid black;
+}
+.contactTouchMessage{
+width: 80%;
+height: 120px;
+outline: none;
+border: 1px solid black;
+}
+.contactTouchSubmit{
+background-color: transparent;
+width: 100px;
+height: 47px;
+border: 1px solid white;
+color: white;
+font-size: 16px;
+font-weight: 300;
+}
+.contactTouchSubmit:hover{
+background-color: white;
+color: #000;
+}
+.touchText{
+font-size: 53px;
+font-weight: 600;
+font-family: 'Poppins',sans-serif;
+}

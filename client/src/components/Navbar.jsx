@@ -23,16 +23,26 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
                         <li className="nav-item m-2">
                             <Link to='/about-us' className="nav-link" id="sabLink">ABOUT US</Link>
                         </li>
-                        <div class="nav-item dropdown">
+                        <div className="nav-item dropdown">
                             <Link to='/services' className="nav-link pt-3" id="sabLink">SERVICES</Link>
-                            <div class="dropdown-content">
+                            <div className="dropdown-content">
                                 <a href="/flooring" className="dropdown-item">Flooring</a>
                                 <a href="/supply-and-installation" className="dropdown-item">Supply And Installation</a>
                             </div>
                         </div>
-                        <li className="nav-item m-2">
+
+                        <div className='nav-item dropdown'>
+                            <Link to="/products" className="nav-link pt-3" id="sabLink">PRODUCTS</Link>
+                            <div className="dropdown-content">
+                                <a href="/laminate" className="dropdown-item">Laminate</a>
+                                <a href="/hybrid" className="dropdown-item">Hybrid</a>
+                                <a href="/engineered-flooring" className="dropdown-item">Engineered Flooring</a>
+                                <a href="/parquetry-flooring" className="dropdown-item">Parquetry Flooring</a>
+                            </div>
+                        </div>
+                        {/* <li className="nav-item m-2">
                             <Link to="/products" className="nav-link" id="sabLink">PRODUCTS</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item m-2">
                             <Link to='/gallery' className="nav-link" id="sabLink" >GALLERY</Link>
                         </li>
@@ -77,9 +87,18 @@ function Navbar({ auth: { isAuthenticated, loading }, logout }) {
                                 <a href="/supply-and-installation" className="dropdown-item">Supply And Installation</a>
                             </div>
                         </div>
-                        <li className="nav-item m-2">
+                        <div className='nav-item dropdown'>
+                            <Link to="/products" className="nav-link pt-3" id="sabLink">PRODUCTS</Link>
+                            <div className="dropdown-content">
+                                <a href="/laminate" className="dropdown-item">Laminate</a>
+                                <a href="/hybrid" className="dropdown-item">Hybrid</a>
+                                <a href="/engineered-flooring" className="dropdown-item">Engineered Flooring</a>
+                                <a href="/parquetry-flooring" className="dropdown-item">Parquetry Flooring</a>
+                            </div>
+                        </div>
+                        {/* <li className="nav-item m-2">
                             <Link to="/products" className="nav-link" id="sabLink">PRODUCTS</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item m-2">
                             <Link to='/gallery' className="nav-link" id="sabLink" >GALLERY</Link>
                         </li>

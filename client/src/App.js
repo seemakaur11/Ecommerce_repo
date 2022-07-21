@@ -15,6 +15,9 @@ import About from './components/About';
 import Services from './components/Services';
 import Floor from './components/Floor';
 import SupplyAndInstall from './components/SupplyAndInstall';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Product from './components/Product';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -35,6 +38,9 @@ function App() {
           <Route path='/about-us' element={<About />} />
           <Route path='/services' element={<Services />} />
           <Route path='/flooring' element={<Floor />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/contact-us' element={<Contact />} />
+          <Route path='/products' element={<Product />} />
           <Route
             path='/supply-and-installation'
             element={<SupplyAndInstall />}

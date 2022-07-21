@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo1 from '../images/logo1.png';
 import mLogo from '../images/mLogo.png';
 import '../styles/Footer.css'
 
 function Footer() {
+
+    const [visible, setVisible] = useState(false);
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 300) {
+            setVisible(true)
+        }
+        else if (scrolled <= 300) {
+            setVisible(false)
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    window.addEventListener('scroll', toggleVisible);
     return (
         <section className='pt-5'>
             <div style={{ backgroundColor: "black" }}>
@@ -58,6 +78,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            {/* topScrollBtn */}
+            <i className="fa-solid fa-angle-up" onClick={scrollToTop} style={{ display: visible ? 'inline' : 'none' }} id="scrollBtn"></i>
         </section>
     )
 }
